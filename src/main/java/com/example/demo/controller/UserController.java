@@ -1,12 +1,10 @@
 package com.example.demo.controller;
 
 import com.example.demo.mapper.UserMapper;
-import com.example.demo.model.User;
+import com.example.demo.entity.User;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -17,28 +15,29 @@ public class UserController {
     @Autowired
     UserMapper userMapper;
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    User queryById(@PathVariable("id") int id){
-        return userMapper.queryById(id);
-    }
-
-    @RequestMapping(method = RequestMethod.GET)
+    @GetMapping
+    @ApiOperation(value = "用户列表")
     List<User> queryAll(){
         return userMapper.queryAll();
     }
 
-    @RequestMapping(method = RequestMethod.POST)
+    @GetMapping("/{id}")
+    User queryById(@PathVariable("id") int id){
+        return userMapper.queryById(id);
+    }
+
+    @PostMapping
     int add(User user){
         return userMapper.add(user);
     }
 
-    @RequestMapping(method = RequestMethod.PUT)
+    @PutMapping
     int update(User user){
         return userMapper.updateById(user);
     }
 
-    @RequestMapping(method = RequestMethod.DELETE)
+    @DeleteMapping
     int delete(int id){
-        return userMapper.delById(id);
+        return userMapper.deleteById(id);
     }
 }

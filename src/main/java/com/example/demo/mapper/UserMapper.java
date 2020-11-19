@@ -1,6 +1,6 @@
 package com.example.demo.mapper;
 
-import com.example.demo.model.User;
+import com.example.demo.entity.User;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
@@ -17,7 +17,7 @@ public interface UserMapper {
     int add(User user);
 
     @Delete("delete from user where id = ${id}")
-    int delById(int id);
+    int deleteById(int id);
 
     @Update("update user set name=${name}, age=#{age} where id=#{id}")
     int updateById(User user);
