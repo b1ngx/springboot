@@ -1,0 +1,6 @@
+#FileLock
+#Thu Nov 19 12:55:44 CST 2020
+server=192.168.88.100\:60240
+hostName=192.168.88.100
+method=file
+id=175dedbbdc7bfd9b6407d0a4ae3873cd40fb17aedb4

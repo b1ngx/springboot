@@ -4,8 +4,3 @@ CREATE TABLE user (
     name varchar(255) DEFAULT NULL,
     age int(11) DEFAULT NULL
 );
-
-INSERT INTO user (name, age) VALUES
-  ('Aliko', 18),
-  ('Bill', 20),
-  ('Folrunsho', 30);
