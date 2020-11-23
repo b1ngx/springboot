@@ -31,6 +31,15 @@ export CPPFLAGS="-I/usr/local/opt/openjdk/include"
 🍺  /usr/local/Cellar/openjdk/15.0.1: 614 files, 324.9MB
 
 ## H2 Database
+
+`application.properties` 添加如下配置:
+
+```shell script
+spring.datasource.url=jdbc:h2:file:/Users/b1ngx/IdeaProjects/demo/src/main/resources/data/demo;AUTO_SERVER=true
+spring.h2.console.enabled=true
+```
+
+参考：
 [Spring Boot Java H2 Database Setup in IntelliJ](https://youtu.be/8QBJMxyXIqc)
 
 ## Annotation
