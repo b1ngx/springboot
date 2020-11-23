@@ -32,7 +32,7 @@ export CPPFLAGS="-I/usr/local/opt/openjdk/include"
 
 ## H2 Database
 
-`application.properties` 添加如下配置:
+`application.properties` 配置如下:
 
 ```shell script
 spring.datasource.url=jdbc:h2:file:/Users/b1ngx/IdeaProjects/demo/src/main/resources/data/demo;AUTO_SERVER=true
